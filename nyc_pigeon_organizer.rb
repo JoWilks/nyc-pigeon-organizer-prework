@@ -3,8 +3,7 @@ def nyc_pigeon_organizer(data)
 
 pigeon_names = Hash.new(0)
 
-  data.each {|broad_trait, specific_traits| specific_traits.each { |specific_trait, pigeons| 
-      pigeons.each {|pigeon| 
+  data.each {|broad_trait, specific_traits| specific_traits.each { |specific_trait, pigeons| pigeons.each {|pigeon| 
         if pigeon_names.empty? || !pigeon_names.include?(pigeon)
           pigeon_names[pigeon] = {}
           pigeon_names[pigeon][broad_trait] = [specific_trait.to_s]
